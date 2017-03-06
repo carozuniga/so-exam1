@@ -17,11 +17,11 @@ ejemplo:
 
 ![][1]
 
-En este caso despues de ejecutar el comando vemos que nos encontramos en el directorio /root/curl-7.32.0
+En este caso después de ejecutar el comando vemos que nos encontramos en el directorio /root/curl-7.32.0
 
 - print_file_contents/ 
 
-Este reto consiste en imprimir el contenido de un archivo que se encuentre en el directorio actual, para lo cual se utiliza el comando cat..
+Este reto consiste en imprimir el contenido de un archivo que se encuentre en el directorio actual, para lo cual se utiliza el comando cat.
 ejemplo:
 
 ![][2]
@@ -30,12 +30,12 @@ Para este ejemplo cree un archivo llamado ejemplo.txt con el comando vi, y para 
 
 - find_string_in_a_file/
 
-Este reto consiste en imprimir todas las lineas de un determinado archivo que contengan un string especificado, para esto se emplea el comando grep.
+Este reto consiste en imprimir todas las líneas de un determinado archivo que contengan un string especificado, para esto se emplea el comando grep.
 ejemplo:
 
 ![][3]
 
-Usando el mismo archivo del ejemplo anterior (ejemplo.txt), se empleó el comando para imprimir todas las lineas que tuvieran "de". Empleando el comando grep lo podemos solucionar siguiendo la siguiente estructura:
+Usando el mismo archivo del ejemplo anterior (ejemplo.txt), se empleó el comando para imprimir todas las líneas que tuvieran "de". Empleando el comando grep lo podemos solucionar siguiendo la siguiente estructura:
 grep cadena_de_caracteres archivo.
 
 - simple_sort/
@@ -45,11 +45,11 @@ ejemplo:
 
 ![][4]
 
-Para el ejemplo, creé un archivo llamado orden.txt el cual tiene los numeros desordenados del 1 al 5, al usar el comando sort orden.txt, se observa cómo el contenido del archivo ahora se muestra de forma ordenada.
+Para el ejemplo, creé un archivo llamado orden.txt el cual tiene los números desordenados del 1 al 5, al usar el comando sort orden.txt, se observa cómo el contenido del archivo ahora se muestra de forma ordenada.
 
 - print_number_sequence/
 
-Este reto consiste en imprimir los numeros del 1 al 100 separados por espacios. Para esto empleé el comando echo y seq.
+Este reto consiste en imprimir los números del 1 al 100 separados por espacios. Para esto empleé el comando echo y seq.
 ejemplo:
 
 ![][5]
@@ -60,11 +60,11 @@ Con esta línea se imprime en 1 sola línea el comando seq 100, este comando imp
 
 ![][10]
 
-el script que descarga de forma remota un libro desde las distintas maquinas es el siguiente:
+El script que descarga de forma remota un libro desde las distintas maquinas es el siguiente:
 
 ![][9]
 
-la primera línea input, tiene la dirección en la que se encuentra el archivo de list.txt mencionado anteriormente. Después se hace un while que lee el archivo línea por línea hasta que se acaba. Cada línea se almacena en la variable line.
+La primera línea input, tiene la dirección en la que se encuentra el archivo de list.txt mencionado anteriormente. Después se hace un while que lee el archivo línea por línea hasta que se acaba. Cada línea se almacena en la variable line.
 
 Para ingresar a la maquina usé el protocolo ssh, y como en este caso la contraseña para todas las maquinas es la misma (operativos), empleé la herramienta sshpass para automatizar este proceso y no tener que escribir todas las contraseñas manualmente.
 
@@ -76,24 +76,24 @@ ssh usuario@ip [comandos]
 
 Usuario va a ser reemplazado por operativos, que es el usuario al que queremos acceder, la ip es reemplazada por la línea actual del archivo mencionado anteriormente. Por último escribimos los comandos que queremos ejecutar en la maquina remota, empezando por cd /tmp para ubicarnos en el directorio destino. de forma siguiente se encuetra pwd que nos imprime el directorio actual, para poder visualizar que efectivamente nos encontramos en el directorio /tmp.
 
-Por último utilizamos el comando wget (que debe estar instalado en las demás maquinas), para descargar el libro de alice in worderland de la pagina www.gutenberg.org ubicado en la url que tiene como argumento.
+Por último, utilizamos el comando wget (que debe estar instalado en las demás maquinas), para descargar el libro de alice in worderland de la página www.gutenberg.org ubicado en la url que tiene como argumento.
 
 Para poder correr este script debemos modificarle los permisos con chmod (chmod 700 script3.sh). Al ejecutar el script se obtiene el siguiente resultado:
 
 ![][6]
 
-En esta captura se puede ver el ingreso a las 2 maquinas que tiene en el list.txt , en cada una de ellas se ubica en el directorio /tmp y descarga el libro, dejandolo en un archivo llamado pg19033.txt
+En esta captura se puede ver el ingreso a las 2 máquinas que tiene en el list.txt , en cada una de ellas se ubica en el directorio /tmp y descarga el libro, dejándolo en un archivo llamado pg19033.txt
 
 
 ![][7]
 
-En esta captura se observa la primera maquina, con dirección ip 192.168.0.32, ingresamos al usuario operativos, nos ubicamos en el directorio /tmp y podemos visualizar que dentro de ella se encuentra el libro.
+En esta captura se observa la primera máquina, con dirección ip 192.168.0.32, ingresamos al usuario operativos, nos ubicamos en el directorio /tmp y podemos visualizar que dentro de ella se encuentra el libro.
 
-Lo mismo sucede con la siguiente maquina en la lista que tiene como dirección ip la 192.168.192.130:
+Lo mismo sucede con la siguiente máquina en la lista que tiene como dirección ip la 192.168.192.130:
 
 ![][8]
 
-Finalmente como constancia observamos el contenido del archivo descargado pg19033.txt para verificar que sí es el libro:
+Finalmente, como constancia observamos el contenido del archivo descargado pg19033.txt para verificar que sí es el libro:
 
 ![][16]
 
