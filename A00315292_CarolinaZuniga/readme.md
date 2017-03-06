@@ -4,7 +4,7 @@ Universidad ICESI
 
 **Código:**  A00315292
 
-**Url Repositorio**: https://github.com/ICESI-Training/so-exam1/A00315292_CarolinaZuniga
+**Url Repositorio**: https://github.com/carozuniga/so-exam1/tree/master/A00315292_CarolinaZuniga
 
 ### Solución a las preguntas
 
